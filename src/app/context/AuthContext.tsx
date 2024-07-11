@@ -47,7 +47,10 @@ export const AuthContextProvider = ({ children }: AuthContextProviderProps) => {
         UID: userUid,
         Email: currentUser.user.email,
         Nome: currentUser.user.displayName,
-        AvatarURL: 'https://i1.sndcdn.com/avatars-SHP5vwMoZAweWF8e-ByX8xw-t240x240.jpg' // Altere conforme necessário
+        AvatarURL: 'https://i1.sndcdn.com/avatars-SHP5vwMoZAweWF8e-ByX8xw-t240x240.jpg',
+        LicoesConcluidas: [{Sessao:'', Modulo:'', Capitulo:'', LicaoID:''}],
+        ModulosConcluidos: [''],
+        SessoesConcluidas: ['']
       });
 
       console.log("Novo usuário cadastrado na coleção 'users'");

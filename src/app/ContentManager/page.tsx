@@ -2,6 +2,12 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "@/app/context/AuthContext";
 import Spinner from "../Components/Spiner";
+import AddModule from "./Components/AddModule";
+import AddSection from "./Components/AddSection";
+import AddLesson from "./Components/AddLesson";
+import ImageUpload from "./Components/ImageUpload";
+import Navbar from "../Components/Navbar";
+import AddCapitulo from "./Components/AddCapitulo";
 
 type Props = {
 
@@ -24,11 +30,33 @@ export default function ContentManager({ }: Props) {
         (loading ? <Spinner /> : user && user.email == 'andre.mani2015@gmail.com' ? (
 
             <div>
-                <h1>Your are logged as a Content Manager</h1>
+
+                <Navbar />
+
+                <section className="w-full flex flex-row flex-wrap ">
 
 
-                <section>
-                    <h2>Modulo: </h2>
+                    <div className="w-2/4">
+                        <h1>Tela de criação de sections</h1>
+                        <AddSection />
+                    </div>
+
+                    <div className="w-2/4">
+                        <h1>Crie o modulo</h1>
+                        <AddModule />
+                    </div>
+
+
+                    <div className="w-2/4">
+                        <h1>Crie o capitulo</h1>
+                        <AddCapitulo/>
+                    </div>
+
+                    <div className="w-2/4">
+                        <h1>Crie uma lição</h1>
+                        <AddLesson />
+                    </div>
+
                 </section>
             </div>
 

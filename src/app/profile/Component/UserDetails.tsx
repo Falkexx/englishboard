@@ -14,10 +14,16 @@ const UserDetail: React.FC<UserDetailProps> = ({ dadosUser }) => {
                         <h1>{e.Apelido}</h1>
                         <hr></hr>
 
-                        <h1 className="text-red-700">Conquistas</h1>
-                        <h1>{e.Conquistas.Modulo}</h1>
-                        <hr></hr>
+                        {/*verificando se ele tem alguma conquista */}
 
+                        <h1 className="text-red-700">Conquistas</h1>
+                        {e.Conquistas.length > 0 ? e.Conquistas.map((e) => {
+                            return (
+                                <h1>{e}</h1>
+                            )
+                        }) : 'Não tem nenhuma conquista ainda'}
+
+                        {/*/////////////////////// */}
                         <h1 className="text-red-700">Nome</h1>
                         <h1>{e.Nome}</h1>
                         <hr></hr>
@@ -44,7 +50,7 @@ const UserDetail: React.FC<UserDetailProps> = ({ dadosUser }) => {
                     </div>
                 );
             })}
-        </section>
+        </section >
     );
 };
 

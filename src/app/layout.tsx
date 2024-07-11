@@ -14,7 +14,6 @@ export default function RootLayout({ children }:any) {
       <body className={inter.className}>
         <QueryClientProvider client={queryClient}>
           <AuthContextProvider>
-            <Navbar />
             {children}
           </AuthContextProvider>
         </QueryClientProvider>

@@ -24,7 +24,7 @@ export interface GoogleUserTypes {
 export interface FirebaseUsersTypes{
 
     AvatarURL: string
-    Conquistas: any
+    Conquistas: string[]
     Email: string
     Medalha: string
     Nome: string
