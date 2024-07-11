@@ -27,7 +27,7 @@ export default function ContentManager({ }: Props) {
 
     return (
 
-        (loading ? <Spinner /> : user && user.email == 'andre.mani2015@gmail.com' ? (
+        (loading ? <Spinner /> : user && user.email == 'andre.mani2015@gmail.com' || user?.email == 'joaovictormdc99@gmail.com' ? (
 
             <div>
 
